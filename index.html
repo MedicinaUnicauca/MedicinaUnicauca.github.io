@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación - Entrega de Batas Medicina 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #f5f1e8 0%, #e8dcc8 100%);
+            color: #2d3e3f;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(201,169,97,0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: shimmer 20s linear infinite;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.15);
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #2d4a3e 0%, #3d5a4e 100%);
+            padding: 40px 20px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(201,169,97,0.1), transparent);
+            animation: headerShine 3s infinite;
+        }
+
+        @keyframes headerShine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .university-shield {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .university-shield img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 15px rgba(201,169,97,0.5));
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, white 0%, #f5f1e8 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 8px 30px rgba(201,169,97,0.4), 0 0 0 3px rgba(201,169,97,0.3), inset 0 2px 10px rgba(255,255,255,0.5);
+            animation: logoPulse 3s ease-in-out infinite;
+        }
+
+        .logo svg {
+            width: 60px;
+            height: 60px;
+            fill: #2d4a3e;
+        }
+
+        @keyframes logoPulse {
+            0%, 100% { box-shadow: 0 8px 30px rgba(201,169,97,0.4), 0 0 0 3px rgba(201,169,97,0.3), inset 0 2px 10px rgba(255,255,255,0.5); }
+            50% { box-shadow: 0 8px 40px rgba(201,169,97,0.6), 0 0 0 5px rgba(201,169,97,0.5), inset 0 2px 10px rgba(255,255,255,0.7); }
+        }
+
+        .header h1 {
+            font-size: 3em;
+            color: white;
+            margin-bottom: 10px;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            color: #f5f1e8;
+            font-size: 1.2em;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header .subtitle {
+            color: #e0c288;
+            font-size: 1.1em;
+            margin-top: 10px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        /* Intro Section */
+        .intro {
+            padding: 60px 40px;
+            text-align: center;
+            background: linear-gradient(to bottom, white 0%, #f5f1e8 100%);
+        }
+
+        .intro .symbol {
+            margin-bottom: 20px;
+            filter: drop-shadow(0 4px 15px rgba(201,169,97,0.5));
+            animation: symbolFloat 3s ease-in-out infinite;
+        }
+
+        .intro .symbol svg {
+            width: 80px;
+            height: 80px;
+            fill: #c9a961;
+        }
+
+        @keyframes symbolFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .intro h2 {
+            font-size: 2em;
+            color: #2d4a3e;
+            margin-bottom: 20px;
+            font-style: italic;
+            text-shadow: 0 2px 10px rgba(201,169,97,0.3);
+        }
+
+        .intro p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #2d3e3f;
+        }
+
+        /* Event Details */
+        .details {
+            padding: 60px 40px;
+            background: linear-gradient(135deg, #2d4a3e 0%, #3d5a4e 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            box-shadow: inset 0 2px 20px rgba(0,0,0,0.2);
+        }
+
+        .details::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 48%, rgba(201,169,97,0.05) 50%, transparent 52%);
+            background-size: 30px 30px;
+            animation: detailsPattern 20s linear infinite;
+        }
+
+        @keyframes detailsPattern {
+            0% { background-position: 0 0; }
+            100% { background-position: 60px 60px; }
+        }
+
+        /* Countdown Timer */
+        .countdown-section {
+            padding: 60px 40px;
+            background: linear-gradient(to bottom, white 0%, #f5f1e8 100%);
+            text-align: center;
+        }
+
+        .countdown-section h2 {
+            font-size: 2.5em;
+            color: #2d4a3e;
+            margin-bottom: 30px;
+            font-style: italic;
+            text-shadow: 0 2px 10px rgba(201,169,97,0.3);
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .countdown-item {
+            background: linear-gradient(135deg, #2d4a3e 0%, #3d5a4e 100%);
+            padding: 30px 25px;
+            border-radius: 15px;
+            min-width: 120px;
+            box-shadow: 0 8px 25px rgba(45,74,62,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+            border: 2px solid rgba(201,169,97,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .countdown-item::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(201,169,97,0.1), transparent);
+            animation: countdownShine 3s linear infinite;
+        }
+
+        @keyframes countdownShine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .countdown-number {
+            font-size: 3em;
+            font-weight: bold;
+            color: #e0c288;
+            display: block;
+            margin-bottom: 10px;
+            text-shadow: 0 4px 10px rgba(224,194,136,0.5);
+            position: relative;
+            z-index: 1;
+        }
+
+        .countdown-label {
+            font-size: 0.9em;
+            color: #f5f1e8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Schedule Section */
+        .schedule-section {
+            padding: 60px 40px;
+            background: linear-gradient(135deg, #2d4a3e 0%, #3d5a4e 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .schedule-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 48%, rgba(201,169,97,0.05) 50%, transparent 52%);
+            background-size: 30px 30px;
+            animation: detailsPattern 20s linear infinite;
+        }
+
+        .schedule-section h2 {
+            font-size: 2.5em;
+            color: #f5f1e8;
+            margin-bottom: 40px;
+            text-align: center;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.3), 0 0 30px rgba(201,169,97,0.3);
+        }
+
+        .schedule-timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .schedule-item {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(201,169,97,0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .schedule-item::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(201,169,97,0.1), transparent);
+            transition: all 0.5s ease;
+        }
+
+        .schedule-item:hover {
+            transform: translateX(10px);
+            background: rgba(255,255,255,0.15);
+            box-shadow: 0 8px 25px rgba(201,169,97,0.3);
+        }
+
+        .schedule-item:hover::before {
+            animation: cardShine 1.5s ease-in-out;
+        }
+
+        .schedule-time {
+            min-width: 120px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .schedule-time .time {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #e0c288;
+            display: block;
+            text-shadow: 0 2px 10px rgba(224,194,136,0.5);
+        }
+
+        .schedule-divider {
+            width: 3px;
+            height: 60px;
+            background: linear-gradient(to bottom, #c9a961, #e0c288);
+            border-radius: 2px;
+            box-shadow: 0 0 10px rgba(201,169,97,0.5);
+            position: relative;
+            z-index: 1;
+        }
+
+        .schedule-content {
+            flex: 1;
+            position: relative;
+            z-index: 1;
+        }
+
+        .schedule-content h3 {
+            font-size: 1.3em;
+            color: #f5f1e8;
+            margin-bottom: 5px;
+        }
+
+        .schedule-content p {
+            color: #e8dcc8;
+            font-size: 0.95em;
+        }
+
+        .details h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            font-style: italic;
+            color: #f5f1e8;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.3), 0 0 30px rgba(201,169,97,0.3);
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .detail-card {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.1);
+        }
+
+        .detail-card.location-card {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .detail-card.location-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(45, 74, 62, 0.85);
+            z-index: 0;
+        }
+
+        .detail-card.location-card > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .detail-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(201,169,97,0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.5s ease;
+        }
+
+        .detail-card:hover::before {
+            animation: cardShine 1.5s ease-in-out;
+        }
+
+        @keyframes cardShine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .detail-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.15);
+            box-shadow: 0 15px 40px rgba(201,169,97,0.3), inset 0 1px 0 rgba(255,255,255,0.2);
+        }
+
+        .detail-icon {
+            margin-bottom: 15px;
+            filter: drop-shadow(0 4px 10px rgba(224,194,136,0.5));
+            position: relative;
+            z-index: 1;
+        }
+
+        .detail-icon svg {
+            width: 50px;
+            height: 50px;
+            fill: #e0c288;
+        }
+
+        .detail-card h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #f5f1e8;
+            position: relative;
+            z-index: 1;
+        }
+
+        .detail-card p {
+            font-size: 1.1em;
+            color: #e8dcc8;
+            position: relative;
+            z-index: 1;
+        }
+
+        .detail-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 20px;
+            background: rgba(201,169,97,0.2);
+            color: #e0c288;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(201,169,97,0.3);
+            font-size: 0.95em;
+        }
+
+        .detail-link:hover {
+            background: rgba(201,169,97,0.3);
+            color: #f5f1e8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(201,169,97,0.3);
+        }
+
+        .calendar-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #c9a961 0%, #e0c288 100%);
+            color: #2d4a3e;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(201,169,97,0.4);
+            position: relative;
+            z-index: 1;
+        }
+
+        .calendar-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(201,169,97,0.6);
+        }
+
+        .dress-code-section {
+            margin-top: 40px;
+            padding: 30px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(201,169,97,0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        .dress-code-section h3 {
+            font-size: 1.5em;
+            color: #e0c288;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .dress-code-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 30px;
+            background: rgba(201,169,97,0.2);
+            color: #e0c288;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(201,169,97,0.3);
+            font-size: 1em;
+            font-weight: 600;
+        }
+
+        .dress-code-link:hover {
+            background: rgba(201,169,97,0.3);
+            color: #f5f1e8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(201,169,97,0.4);
+        }
+
+        /* Students Section */
+        .students {
+            padding: 60px 40px;
+            background: #f5f1e8;
+        }
+
+        .students h2 {
+            font-size: 2.5em;
+            text-align: center;
+            color: #2d4a3e;
+            margin-bottom: 40px;
+            font-style: italic;
+            text-shadow: 0 2px 10px rgba(201,169,97,0.3);
+        }
+
+        .students-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .student-card {
+            background: linear-gradient(135deg, white 0%, #fefefe 100%);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(74,104,96,0.1);
+            transition: all 0.3s ease;
+            border-left: 4px solid #c9a961;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            min-height: 180px;
+        }
+
+        .student-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(201,169,97,0.1), transparent);
+            transition: left 0.5s ease;
+        }
+<!---->
+        .student-photo-placeholder {
+    width: 100px;          /* Ajusta según tu diseño */
+    height: 100px;
+    border-radius: 50%;    /* Hace el contenedor circular */
+    overflow: hidden;      /* Recorta la imagen dentro del círculo */
+    background-color: #ddd; /* Color de fondo opcional */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.student-photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     /* Recorta la imagen sin deformarla */
+}
+
+.university-shield {
+    width: 200px;          /* Ajusta este valor para hacerla más grande */
+    height: auto;
+}
+
+.university-shield img {
+    width: 100%;           /* Hace que la imagen ocupe todo el ancho del contenedor */
+    height: auto;          /* Mantiene proporción */
+    display: block;        /* Elimina espacios indeseados */
+}
+<!---->
+        .student-card:hover::before {
+            left: 100%;
+        }
+
+        .student-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(201,169,97,0.3), 0 0 0 2px rgba(201,169,97,0.2);
+            border-left-color: #2d4a3e;
+        }
+
+        .student-photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #c9a961;
+            box-shadow: 0 4px 10px rgba(201,169,97,0.3);
+        }
+
+        .student-photo-placeholder {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f5f1e8 0%, #e8dcc8 100%);
+            border: 3px solid #c9a961;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            color: #2d4a3e;
+        }
+
+        .student-card p {
+            font-size: 0.95em;
+            color: #2d3e3f;
+            font-weight: 500;
+            margin: 0;
+            line-height: 1.3;
+            max-width: 100%;
+        }
+
+        /* Group Photo */
+        .group-photo {
+            padding: 60px 40px;
+            background: linear-gradient(135deg, #3d5a4e 0%, #2d4a3e 100%);
+            text-align: center;
+            position: relative;
+            box-shadow: inset 0 2px 20px rgba(0,0,0,0.3);
+        }
+
+        .group-photo::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(201,169,97,0.1) 0%, transparent 70%);
+        }
+
+        .group-photo h2 {
+            font-size: 2.5em;
+            color: #f5f1e8;
+            margin-bottom: 30px;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.3), 0 0 30px rgba(201,169,97,0.3);
+        }
+
+        .photo-container {
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3), 0 0 0 3px rgba(201,169,97,0.3), 0 0 30px rgba(201,169,97,0.2);
+            position: relative;
+            z-index: 1;
+            border: 5px solid rgba(255,255,255,0.1);
+        }
+
+        .photo-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* RSVP Section */
+        .rsvp {
+            padding: 60px 40px;
+            background: linear-gradient(to bottom, #e8dcc8 0%, #f5f1e8 100%);
+            text-align: center;
+        }
+
+        .rsvp h2 {
+            font-size: 2.5em;
+            text-align: center;
+            color: #2d4a3e;
+            margin-bottom: 40px;
+            font-style: italic;
+            text-shadow: 0 2px 10px rgba(201,169,97,0.3);
+        }
+
+        .rsvp-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .rsvp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 20px 40px;
+            background: linear-gradient(135deg, #2d4a3e 0%, #3d5a4e 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(45,74,62,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .rsvp-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .rsvp-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .rsvp-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(201,169,97,0.4), 0 0 20px rgba(201,169,97,0.2);
+        }
+
+        .rsvp-btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Photos Upload Section */
+        .photos-section {
+            padding: 60px 40px;
+            background: linear-gradient(to bottom, #f5f1e8 0%, white 100%);
+            text-align: center;
+        }
+
+        .photos-section h2 {
+            font-size: 2.5em;
+            color: #2d4a3e;
+            margin-bottom: 20px;
+            font-style: italic;
+            text-shadow: 0 2px 10px rgba(201,169,97,0.3);
+        }
+
+        .photos-section p {
+            font-size: 1.1em;
+            color: #2d3e3f;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .upload-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 18px 45px;
+            background: linear-gradient(135deg, #c9a961 0%, #e0c288 100%);
+            color: #2d4a3e;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(201,169,97,0.4);
+        }
+
+        .upload-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(201,169,97,0.6);
+        }
+
+        .rsvp-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(74,104,96,0.15), 0 0 0 3px rgba(201,169,97,0.2);
+            border: 3px solid #c9a961;
+            position: relative;
+            overflow: hidden;
+            display: none;
+        }
+
+        .rsvp-form::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #c9a961, #e0c288, #c9a961, #e0c288);
+            background-size: 400% 400%;
+            border-radius: 15px;
+            z-index: -1;
+            animation: borderGlow 3s ease infinite;
+        }
+
+        @keyframes borderGlow {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2d4a3e;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #c9a961;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #2d4a3e;
+            box-shadow: 0 0 0 3px rgba(45,74,62,0.1), 0 0 15px rgba(201,169,97,0.3);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #2d4a3e 0%, #3d5a4e 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(45,74,62,0.3);
+        }
+
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .submit-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(201,169,97,0.4), 0 0 20px rgba(201,169,97,0.2);
+        }
+
+        .success-message {
+            display: none;
+            background: linear-gradient(135deg, #3d5a4e 0%, #2d4a3e 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.1em;
+            box-shadow: 0 4px 15px rgba(45,74,62,0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+        }
+
+        /* Footer */
+        .footer {
+            background: #2d3e3f;
+            color: #e8dcc8;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer p {
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        .footer .hashtag {
+            color: #c9a961;
+            font-size: 1.2em;
+            font-style: italic;
+            margin-top: 15px;
+            display: block;
+        }
+
+        /* Decorative Elements */
+        .divider {
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(to right, transparent, #c9a961, transparent);
+            margin: 30px auto;
+            box-shadow: 0 2px 10px rgba(201,169,97,0.5);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .intro h2,
+            .details h2,
+            .students h2,
+            .group-photo h2,
+            .rsvp h2 {
+                font-size: 1.8em;
+            }
+
+            .students-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <!-- Escudo de la Universidad del Cauca -->
+            <div class="university-shield">
+                <!-- Reemplaza 'escudo-unicauca.png' con tu archivo de escudo -->
+                <img src="imagenes/Imagenes/000_Escudo_unicauca-removebg-preview.png" alt="Universidad del Cauca">
+            </div>
+            
+            <h1>Invitación</h1>
+            <p>Universidad del Cauca</p>
+            <p class="subtitle">Médicos Internos 2026-1</p>
+        </div>
+
+        <!-- Intro -->
+        <div class="intro">
+            <div class="symbol">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.5 13H8V18H6.5V13H4L7.5 9.5L11 13M17.5 18V15H20L16.5 11.5L13 15H15.5V18M22 12C22 17.5 17.5 22 12 22S2 17.5 2 12 6.5 2 12 2 22 6.5 22 12M20 12C20 7.58 16.42 4 12 4S4 7.58 4 12 7.58 20 12 20 20 16.42 20 12Z"/>
+                </svg>
+            </div>
+            <h2>Entrega de Batas Medicina 2026-1</h2>
+            <div class="divider"></div>
+            <p>Hoy comienza una nueva etapa donde la vocación de servicio nos llama a cuidar y asistir cada vida humana con un acto espontáneo, atento con compromiso y dedicación. Cada paciente importa, cada historia es única. Apoyamos su paso hacia la excelencia.</p>
+            <p style="margin-top: 20px; font-style: italic; color: #c9a961;">Gracias a quienes han sido guía y apoyo en este paso hacia lo profesional.</p>
+        </div>
+
+        <!-- Countdown Timer -->
+        <div class="countdown-section">
+            <h2>Cuenta Regresiva</h2>
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">00</span>
+                    <span class="countdown-label">Días</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Horas</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Minutos</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Segundos</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Schedule/Cronograma -->
+        <div class="schedule-section">
+            <h2>Cronograma del Evento</h2>
+            <div class="schedule-timeline">
+                <div class="schedule-item">
+                    <div class="schedule-time">
+                        <span class="time">1:00 PM</span>
+                    </div>
+                    <div class="schedule-divider"></div>
+                    <div class="schedule-content">
+                        <h3>Inicio del Evento</h3>
+                        <p>Recepción de invitados y registro</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="schedule-time">
+                        <span class="time">1:30 PM</span>
+                    </div>
+                    <div class="schedule-divider"></div>
+                    <div class="schedule-content">
+                        <h3>Cierre de Puertas</h3>
+                        <p>Inicio de la ceremonia protocolar</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="schedule-time">
+                        <span class="time">4:30 PM</span>
+                    </div>
+                    <div class="schedule-divider"></div>
+                    <div class="schedule-content">
+                        <h3>Cierre Protocolario</h3>
+                        <p>Finalización de la ceremonia formal</p>
+                    </div>
+                </div>
+
+                <div class="schedule-item">
+                    <div class="schedule-time">
+                        <span class="time">4:30 - 7:00 PM</span>
+                    </div>
+                    <div class="schedule-divider"></div>
+                    <div class="schedule-content">
+                        <h3>Sesión de Fotos</h3>
+                        <p>Tiempo para fotografías y celebración</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Event Details -->
+        <div class="details">
+            <h2>Detalles del Evento</h2>
+            <div class="details-grid">
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 3H18V1H16V3H8V1H6V3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3M19 19H5V8H19V19Z"/>
+                        </svg>
+                    </div>
+                    <h3>Fecha</h3>
+                    <p>07 de Diciembre, 2025</p>
+                </div>
+                <div class="detail-card location-card" style="background-image: url('teatro-guillermo-valencia.jpg');">
+                    <div class="detail-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22S19 14.25 19 9C19 5.13 15.87 2 12 2M12 11.5C10.62 11.5 9.5 10.38 9.5 9S10.62 6.5 12 6.5 14.5 7.62 14.5 9 13.38 11.5 12 11.5Z"/>
+                        </svg>
+                    </div>
+                    <h3>Lugar</h3>
+                    <p>Teatro Guillermo Valencia</p>
+                    <p style="font-size: 0.95em; margin-top: 5px;">Universidad del Cauca</p>
+                    <a href="https://maps.app.goo.gl/KiUeKieYTeUGsU8A8" target="_blank" class="detail-link">Ver en Google Maps</a>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M12 20C7.59 20 4 16.41 4 12S7.59 4 12 4 20 7.59 20 12 16.41 20 12 20M12.5 7V12.25L17 14.92L16.25 16.15L11 13V7H12.5Z"/>
+                        </svg>
+                    </div>
+                    <h3>Ceremonia</h3>
+                    <p>1:00 PM</p>
+                    <p style="font-size: 0.9em; margin-top: 10px; color: #e0c288;">Cierre de puertas: 1:30 PM</p>
+                </div>
+            </div>
+            
+            <a href="#" id="addToCalendar" class="calendar-btn">
+                Añadir a Google Calendar
+            </a>
+
+            <div class="dress-code-section">
+                <h3>
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 30px; height: 30px; fill: #e0c288;">
+                        <path d="M16 21H8C6.9 21 6 20.1 6 19V5C6 3.9 6.9 3 8 3H10.5L12 4.5L13.5 3H16C17.1 3 18 3.9 18 5V19C18 20.1 17.1 21 16 21Z"/>
+                    </svg>
+                    <span>Código de Vestimenta - Formal</span>
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 30px; height: 30px; fill: #e0c288;">
+                        <path d="M12 2C10.9 2 10 2.9 10 4V5.08C8.16 5.56 7 7.03 7 9V14C7 15.66 8.34 17 10 17H14C15.66 17 17 15.66 17 14V9C17 7.03 15.84 5.56 14 5.08V4C14 2.9 13.1 2 12 2M10 20V19H14V20C14 21.1 13.1 22 12 22S10 21.1 10 20Z"/>
+                    </svg>
+                </h3>
+                <p style="color: #e8dcc8; margin-bottom: 15px;">Consulta nuestras sugerencias de vestuario</p>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://es.pinterest.com/pin/35958497019875114/" target="_blank" class="dress-code-link">
+                        Click aquí para ver ideas - Mujeres
+                    </a>
+                    <a href="https://mx.pinterest.com/sara90121/traje-boda-hombre-invitado/" target="_blank" class="dress-code-link">
+                        Click aquí para ver ideas - Hombres
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Students Section -->
+        <div class="students">
+            <h2>Nuestros Estudiantes</h2>
+            <div class="students-grid">
+                <div class="student-card">
+                    <div class="student-photo-placeholder">👤</div>
+                    <!-- Reemplaza con: <img src="fotos/luisa-ante.jpg" alt="Luisa Fernanda Ante" class="student-photo"> -->
+                    <p>Luisa Fernanda<br>Ante</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-photo-placeholder">👤</div>
+                    <p>Sebastian<br>Arellano</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-photo-placeholder">👤</div>
+                    <p>Lizeth<br>Bolaños</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-photo-placeholder">👤</div>
+                    <p>Alejandro<br>Cajas</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-photo-placeholder">👤</div>
+                    <p>Maria José<br>Caldon</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-photo-placeholder">👤</div>
+                    <p>Daniela<br>Castillo</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-photo-placeholder">👤</div>
+                    <p>Alessandro<br>Celis Q</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-photo-placeholder">👤</div>
+                    <p>Daniela<br>Chilama</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-photo-placeholder">👤</div>
+                    <p>Camilo<br>Contreras</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-photo-placeholder">👤</div>
+                    <p>Ana Cristina<br>Cuaji</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-photo-placeholder">👤</div>
+                    <p>Victor David<br>Morales</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-photo-placeholder">👤</div>
+                    <p>Laura V<br>Daza</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-photo-placeholder">👤</div>
+                    <p>Victoria<br>Delgado</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-photo-placeholder">👤</div>
+                    <p>Jorge Andrés<br>Diaz</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-photo-placeholder">👤</div>
+                    <p>Laura Melissa<br>Diaz</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-photo-placeholder">👤</div>
+                    <p>Alejandra<br>Figueroa</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-photo-placeholder">👤</div>
+                    <p>Leyder<br>Gomez</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-photo-placeholder">👤</div>
+                    <p>Angelica<br>Martinez</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-photo-placeholder">👤</div>
+                    <p>Lina Maria<br>Mejía</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-photo-placeholder">👤</div>
+                    <p>Alejandra<br>Morales</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-photo-placeholder">👤</div>
+                    <p>Juan Jose<br>Mosquera</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-photo-placeholder">
+                    <img src="imagenes/Imagenes/00_Ojeda.png" alt="Foto de Helen Daniela Ojeda">
+                    </div>
+                    <p>Helen Daniela<br>Ojeda</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-photo-placeholder">👤</div>
+                    <p>Santiago<br>Ortega</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-photo-placeholder">👤</div>
+                    <p>Dayana<br>Rivera</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-photo-placeholder">👤</div>
+                    <p>Isabella<br>Roa Ramos</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-photo-placeholder">👤</div>
+                    <p>Vanessa<br>Romo</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-photo-placeholder">👤</div>
+                    <p>Laura<br>Rosero</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-photo-placeholder">👤</div>
+                    <p>Jesus Alfonso<br>Ruiz</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-photo-placeholder">👤</div>
+                    <p>Carlos<br>Sandoval</p>
+                </div>
+                <div class="student-card">
+                    <div class="student-photo-placeholder">👤</div>
+                    <p>Laura Marcela<br>Sarria</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Group Photo -->
+        <div class="group-photo">
+            <h2>Nuestra Promoción</h2>
+            <div class="photo-container">
+                <img src="imagenes/Imagenes/000 foto grupal.png" alt="Foto Grupal">
+            </div>
+            <p style="margin-top: 20px; color: #e8dcc8; font-size: 1.1em; position: relative; z-index: 1;">Médicos Internos 2026-1</p>
+        </div>
+
+        <!-- RSVP Form -->
+        <div class="rsvp">
+            <h2>Confirma tu Asistencia</h2>
+            <div class="rsvp-buttons">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfx1B8hbUdkGkGbutu_jWaCB0MNzn-IFrtg8xeH7i-sM6PUMA/viewform" target="_blank" class="rsvp-btn">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 24px; height: 24px; fill: currentColor;">
+                        <path d="M9 11H7V9H9V11M13 11H11V9H13V11M17 11H15V9H17V11M19 3H18V1H16V3H8V1H6V3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3M19 19H5V8H19V19Z"/>
+                    </svg>
+                    <span>Confirmar Asistencia</span>
+                </a>
+            </div>
+            <p style="margin-top: 20px; color: #2d3e3f; font-size: 1em;">
+                Haz clic en el botón para completar el formulario de confirmación
+            </p>
+        </div>
+
+        <!-- Photos Upload Section -->
+        <div class="photos-section">
+            <h2>Comparte tus Fotos del Evento</h2>
+            <p>¡Queremos ver tus mejores momentos! Sube las fotos que tomes durante la ceremonia y la celebración.</p>
+            <a href="https://drive.google.com/drive/folders/1USF4Jr5iPeRmFqRPc8Wf1boIlQaEhEIL?usp=sharing" target="_blank" class="upload-btn">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 24px; height: 24px; fill: currentColor;">
+                    <path d="M9 16V10H5L12 3L19 10H15V16H9M5 20V18H19V20H5Z"/>
+                </svg>
+                <span>Subir Fotos al Drive</span>
+            </a>
+            <p style="margin-top: 20px; color: #2d3e3f; font-size: 0.9em; font-style: italic;">
+                Las fotos quedarán guardadas en nuestra carpeta compartida para que todos puedan verlas
+            </p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Gracias por acompañarnos en este camino y hacer parte de esta historia.</p>
+            <span class="hashtag">#BatasUnicauca</span>
+        </div>
+    </div>
+
+    <script>
+        // Countdown Timer
+        const countdownDate = new Date("December 7, 2025 13:00:00").getTime();
+
+        const updateCountdown = () => {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = String(days).padStart(2, '0');
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+
+            if (distance < 0) {
+                document.getElementById('countdown').innerHTML = '<p style="font-size: 2em; color: #c9a961;">¡El evento ha comenzado!</p>';
+            }
+        };
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // Add to Google Calendar
+        document.getElementById('addToCalendar').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const eventDetails = {
+                text: 'Entrega de Batas - Medicina 2026-1',
+                dates: '20251207T180000Z/20251207T200000Z', // 1:00 PM - 3:00 PM Colombia (UTC-5)
+                details: 'Ceremonia de entrega de batas para Médicos Internos 2026-1. Cierre de puertas: 1:30 PM',
+                location: 'Teatro Guillermo Valencia, Universidad del Cauca, Popayán',
+                ctz: 'America/Bogota'
+            };
+            
+            const googleCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventDetails.text)}&dates=${eventDetails.dates}&details=${encodeURIComponent(eventDetails.details)}&location=${encodeURIComponent(eventDetails.location)}&ctz=${eventDetails.ctz}`;
+            
+            window.open(googleCalendarUrl, '_blank');
+        });
+        
+    </script>
+    
+</body>
+</html>
